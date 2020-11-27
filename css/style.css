@@ -238,6 +238,10 @@ main{
 			justify-content: center;
 		}
 
+		article.profile-posts nav {
+			margin: 0 1rem 2rem 1rem;
+		}
+
 		article.highlighted-stories ul li figure img {
 			width: 66px;
 			height: 66px;
