@@ -55,7 +55,7 @@ footer{
 
 footer nav.footer-nav {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	flex: 5;
 }
 
@@ -65,7 +65,7 @@ footer nav.footer-nav a {
 	font-size: 0.8rem;
 	font-weight: bold;
 	color: #66C;
-	margin: 0 0.5rem 0 0;
+	margin: 0 0.5rem 0.5rem 0.5rem;
 }
 
 footer div.copyright p {
@@ -73,6 +73,7 @@ footer div.copyright p {
 	font-size: 0.75rem;
 	font-weight: bold;
 	color: #bbb;
+	margin: 0 0.5rem 0 0;
 }
 
 /*PÁGINA INICIAL*/
@@ -211,4 +212,54 @@ main{
 	article.profile-posts nav:first-child::after {
 		border-top:  var(--cor-fonte-default);
 		padding-top: 1.3rem;
+	}
+
+	@media (max-width: 767px) {
+		/*PÁGINA INICIAL*/
+		main{
+			max-width: 100vh;
+			width: 100%;
+			margin: 0 auto;	
+			border: 2px solid var(--cor-borda-default);
+			background-color: #eee;
+			padding: 15.5px;
+			display: flex;
+			flex-flow: column nowrap;
+		}
+
+		main .profile-content{
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+		}
+		
+		article.highlighted-stories ul {
+			margin: 2rem 2rem;
+			justify-content: center;
+		}
+
+		article.highlighted-stories ul li figure img {
+			width: 66px;
+			height: 66px;
+			border-radius: 100%;
+			margin: 0 0 0.5rem 0;
+		}
+
+		/*RODAPÉ*/
+		footer{
+			max-width: var(--largura-pg);
+			width: 100%;
+			margin: 1.5rem auto;	
+			display: flex;
+			flex-flow: column nowrap;
+		}
+
+		footer nav.footer-nav a {
+			font-size: 0.7rem;
+		}
+
+		footer div.copyright p {
+			margin: 0.5rem 0.5rem 0 0.5rem;
+		}
+
 	}
